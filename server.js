@@ -24,10 +24,19 @@ async function fetchAllProducts(after = null) {
           edges {
             cursor
             node {
-              id
-              title
-              metafield(namespace: "custom", key: "kleber_nr_") {
-                value
+                title
+                onlineStoreUrl
+                featuredImage {
+                    originalSrc
+                }
+                priceRange {
+                    minVariantPrice {
+                    amount
+                    currencyCode
+                    }
+                }
+                metafield(namespace: "custom", key: "kleber_nr_") {
+                    value
               }
             }
           }
