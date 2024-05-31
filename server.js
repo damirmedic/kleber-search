@@ -28,6 +28,7 @@ async function fetchAllProducts(after = null) {
                 onlineStoreUrl
                 featuredImage {
                     originalSrc
+                    transformedSrc(maxWidth: 980, maxHeight: 980)
                 }
                 priceRange {
                     minVariantPrice {
